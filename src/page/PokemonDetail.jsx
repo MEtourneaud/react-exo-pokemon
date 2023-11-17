@@ -82,8 +82,8 @@ function PokemonDetail() {
         <>
             <Header />
             <h2>Détail du pokémon</h2>
-            <p>{pokemonToDisplay.name}</p>
             <img src={pokemonToDisplay.img} alt={pokemonToDisplay.name}></img>
+            <p>{pokemonToDisplay.name}</p>
             <Footer />
         </>
     )
