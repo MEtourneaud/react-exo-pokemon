@@ -1,10 +1,9 @@
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 
-import "./Home.scss"
+import "./Pokemons.scss"
 
-
-function Home() {
+function Pokemons() {
     const pokemons = [
         {
           id: 1,
@@ -71,20 +70,18 @@ function Home() {
         },
       ];
 
-      const pkmnInTeam = pokemons.filter((pokemon) => {
-        return pokemon.isInTeam === true
-      })
 
-    return(
-        <main>
+      
+    return(        
+        <>
             <Header />
-            <div className="main">
-                <h1>Attrapez-les tous !</h1>
+            <div className="pokemon">
+                <h1>Ma Team !</h1>
                 <div className="pkmns-container">
-                    {pkmnInTeam.map((pokemon) => {
+                    {pokemons.map((pokemon) => {
                         return(
                             <article className="pkmn-container">
-                                <img className="pkmn" src={pokemon.img} alt="Equipe pokemon"></img>
+                                <img className="pkmn" src={pokemon.img} alt= "Image des pokemons"></img>
                                 <p>{pokemon.name}</p>
                             </article>
                         )
@@ -92,8 +89,8 @@ function Home() {
                 </div>
             </div>
             <Footer />
-        </main>
+        </>
     )
 }
 
-export default Home
+export default Pokemons

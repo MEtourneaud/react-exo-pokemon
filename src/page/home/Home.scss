@@ -1,0 +1,33 @@
+.main {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHQna2vcUv8KLldY3JGh2mDGtuMQ0zcQx-DA&usqp=CAU");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(247, 10, 140);
+}
+
+h1 {
+    color: rgb(247, 10, 168);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.pkmns-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pkmn-container {
+    text-align: center; 
+    width: 30%; 
+    margin-bottom: 20px;
+}
+
+.pkmn {
+    width: 300px;
+    height: auto;
+}
