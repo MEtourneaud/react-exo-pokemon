@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 
 import "./Home.scss"
+import TeamList from "../../components/TeamList";
 
 
 function Home() {
@@ -93,6 +94,7 @@ function Home() {
                         )
                     })}
                 </div>
+                <TeamList />
             </div>
             <Footer />
         </main>
