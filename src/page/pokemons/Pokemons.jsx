@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 
@@ -80,10 +82,12 @@ function Pokemons() {
                 <div className="pkmns-container">
                     {pokemons.map((pokemon) => {
                         return(
-                            <article className="pkmn-container">
-                                <img className="pkmn" src={pokemon.img} alt= "Image des pokemons"></img>
-                                <p>{pokemon.name}</p>
-                            </article>
+                            <Link to={`/pokemons/${pokemon.id}/details`}  className="pkmn-container">
+                                <article className="pkmn-container">
+                                    <img className="pkmn" src={pokemon.img} alt= "pokemons"></img>
+                                    <p>{pokemon.name}</p>
+                                </article>
+                            </Link>
                         )
                     })}
                 </div>

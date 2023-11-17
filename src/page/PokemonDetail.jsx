@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
+import { useParams } from "react-router-dom";
 
-import "./Home.scss"
+import Footer from "../components/footer/Footer"
+import Header from "../components/header/Header"
 
+function PokemonDetail() {
 
-function Home() {
     const pokemons = [
         {
           id: 1,
@@ -72,31 +71,22 @@ function Home() {
         },
       ];
 
-      const pkmnInTeam = pokemons.filter((pokemon) => {
-        return pokemon.isInTeam === true
-      })
+      const { pokemonId } = useParams();
+
+      const pokemonToDisplay = pokemons.find((pokemon) => {
+        return pokemon.id == pokemonId;
+      });
+
 
     return(
-        <main>
+        <>
             <Header />
-            <div className="main">
-                <h1>Attrapez-les tous !</h1>
-                <div className="pkmns-container">
-                    {pkmnInTeam.map((pokemon) => {
-                        return(
-                            <Link to={`/pokemons/${pokemon.id}/details`}  className="pkmn-container">
-                                <article>
-                                    <img className="pkmn" src={pokemon.img} alt="Equipe pokemon"></img>
-                                    <p>{pokemon.name}</p>
-                                </article>
-                            </Link>
-                        )
-                    })}
-                </div>
-            </div>
+            <h2>Détail du pokémon</h2>
+            <p>{pokemonToDisplay.name}</p>
+            <img src={pokemonToDisplay.img} alt={pokemonToDisplay.name}></img>
             <Footer />
-        </main>
+        </>
     )
 }
 
-export default Home
+export default PokemonDetail

@@ -1,5 +1,5 @@
 .main {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHQna2vcUv8KLldY3JGh2mDGtuMQ0zcQx-DA&usqp=CAU");
+    background-image: url("https://static1.thegamerimages.com/wordpress/wp-content/uploads/2020/01/featured-25.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -22,6 +22,7 @@ h1 {
 }
 
 .pkmn-container {
+    flex-direction: column;
     text-align: center; 
     width: 30%; 
     margin-bottom: 20px;
